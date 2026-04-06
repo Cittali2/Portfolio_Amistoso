@@ -225,35 +225,29 @@ function App() {
           </h2>
 
           <form
-          onSubmit={(e) => {
-            e.preventDefault();
-            e.target.reset();
-            setSent(true);
-          }}
-        >
-          <div className="input-row">
-            <input type="text" placeholder="Full Name" required />
-            <input type="email" placeholder="Email Address" required />
-          </div>
+            onSubmit={(e) => {
+              e.preventDefault();
+              e.target.reset();
+              setSent(true);
 
-          <textarea placeholder="Your Message" required></textarea>
+              setTimeout(() => setSent(false), 3000);
+            }}
+          >
+            <div className="input-row">
+              <input type="text" placeholder="Full Name" required />
+              <input type="email" placeholder="Email Address" required />
+            </div>
 
-          <button type="submit">Send Message</button>
+            <textarea placeholder="Your Message" required></textarea>
 
-          {sent && (
-            <p style={{ color: "#c77dff", marginTop: "10px" }}>
-              Message sent ✔
-            </p>
-          )}
+            <button type="submit">Send Message</button>
 
-          onSubmit={(e) => {
-          e.preventDefault();
-          e.target.reset();
-          setSent(true);
-
-          setTimeout(() => setSent(false), 3000); // ⏱ auto hide
-        }}
-        </form>
+            {sent && (
+              <p style={{ color: "#c77dff", marginTop: "10px" }}>
+                Message sent ✔
+              </p>
+            )}
+          </form>
         </div>
       </section>
 
