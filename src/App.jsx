@@ -230,7 +230,7 @@ function App() {
               e.target.reset();
               setSent(true);
 
-              setTimeout(() => setSent(false), 3000);
+              setTimeout(() => setSent(false), 3000); // auto hide
             }}
           >
             <div className="input-row">
