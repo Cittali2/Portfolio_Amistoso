@@ -56,13 +56,29 @@ function App() {
               </p>
 
               <div className="social">
-                <a href="#"><i className="fa-brands fa-instagram"></i></a>
-                <a href="#"><i className="fa-brands fa-linkedin-in"></i></a>
-                <a href="#"><i className="fa-brands fa-twitter"></i></a>
-                <a href="#"><i className="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/nins.svg" target="_blank" rel="noopener noreferrer">
+                  <i className="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="https://www.linkedin.com/in/nina-amistoso" target="_blank" rel="noopener noreferrer">
+                  <i className="fa-brands fa-linkedin-in"></i>
+                </a>
+
+                <a href="https://twitter.com/ninyamistoso" target="_blank" rel="noopener noreferrer">
+                  <i className="fa-brands fa-twitter"></i>
+                </a>
+
+                <a href="https://www.facebook.com/misnins" target="_blank" rel="noopener noreferrer">
+                  <i className="fa-brands fa-facebook-f"></i>
+                </a>
               </div>
 
-              <button className="btn">Download CV</button>
+              <button
+                className="btn"
+                onClick={() => window.open("/cv.pdf")}
+              >
+                Download CV
+              </button>
             </div>
 
             <div className="right">
