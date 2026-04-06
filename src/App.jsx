@@ -74,9 +74,17 @@ function App() {
               </div>
 
 
-              <a href="/cv.pdf" download className="btn primary">
+              <button
+                className="btn"
+                onClick={() => {
+                  const link = document.createElement("a");
+                  link.href = "/My_CV.pdf";
+                  link.download = "Amistoso_CV.pdf"; 
+                  link.click();
+                }}
+              >
                 Download CV
-              </a>
+              </button>
             </div>
 
             <div className="right">
@@ -159,7 +167,6 @@ function App() {
               <div className="portfolio-content">
                 <h4>TRADETIME</h4>
                 <p>Trading app interface design.</p>
-                <span>View Project</span>
 
                 <a
                   href="https://www.figma.com/design/6f84eTidHmfcYpnED6RjkJ/tradetime---Section2?node-id=548-2960&t=2gVIwV0LqoA2H0rZ-1"
@@ -177,7 +184,6 @@ function App() {
               <div className="portfolio-content">
                 <h4>Playlist</h4>
                 <p>Music playlist interface design.</p>
-                <span>View Project</span>
 
                 <a
                   href="https://www.figma.com/design/EylQStogNIw9tiuJuZ5G3p/Amistoso_Challenge2?node-id=0-1&t=6QpDhnEdTqkWgS0v-1"
@@ -195,7 +201,6 @@ function App() {
               <div className="portfolio-content">
                 <h4>Ballpen Ad</h4>
                 <p>Stationery product advertisement design.</p>
-                <span>View Project</span>
 
                 <a
                   href="https://www.figma.com/design/qu0XSSPJ5x2aTOxNi6N8qd/Amistoso_Challenge1?t=6QpDhnEdTqkWgS0v-1"
