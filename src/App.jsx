@@ -1,5 +1,5 @@
 import "./App.css";
-import { useEffect } from "react";
+import { useEffect, useState } from "react"; 
 import Typed from "typed.js";
 
 import profile from "./assets/profilenbg.png";
@@ -10,6 +10,8 @@ import yogasuit from "./assets/yogasuit.png";
 import ballpen from "./assets/ballpen.png";
 
 function App() {
+  const [sent, setSent] = useState(false);
+
   useEffect(() => {
     const typed = new Typed(".multiple", {
       strings: ["Front-End Developer", "Web Designer", "IT Student"],
@@ -222,12 +224,36 @@ function App() {
             Contact <span>Me</span>
           </h2>
 
-          <form>
-            <input type="text" placeholder="Full Name" />
-            <input type="email" placeholder="Email" />
-            <textarea placeholder="Message"></textarea>
-            <button type="submit">Send Message</button>
-          </form>
+          <form
+          onSubmit={(e) => {
+            e.preventDefault();
+            e.target.reset();
+            setSent(true);
+          }}
+        >
+          <div className="input-row">
+            <input type="text" placeholder="Full Name" required />
+            <input type="email" placeholder="Email Address" required />
+          </div>
+
+          <textarea placeholder="Your Message" required></textarea>
+
+          <button type="submit">Send Message</button>
+
+          {sent && (
+            <p style={{ color: "#c77dff", marginTop: "10px" }}>
+              Message sent ✔
+            </p>
+          )}
+
+          onSubmit={(e) => {
+          e.preventDefault();
+          e.target.reset();
+          setSent(true);
+
+          setTimeout(() => setSent(false), 3000); // ⏱ auto hide
+        }}
+        </form>
         </div>
       </section>
 
