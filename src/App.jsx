@@ -242,7 +242,7 @@ function App() {
             <button type="submit">Send Message</button>
 
             {sent && (
-              <p style={{ color: "#c77dff", marginTop: "10px" }}>
+              <p style={{ color: "#1e3a5f", marginTop: "10px" }}>
                 Message sent ✔
               </p>
             )}
