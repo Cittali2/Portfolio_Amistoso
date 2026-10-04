@@ -6,8 +6,7 @@ import profile from "./assets/profilenbg.png";
 import profiledos from "./assets/profiledos.png";
 import tradetime from "./assets/tradetime.png";
 import playlist from "./assets/playlist.png";
-import yogasuit from "./assets/yogasuit.png";
-import ballpen from "./assets/ballpen.png";
+import aktiv from "./assets/aktiv.png";
 
 function App() {
   const [sent, setSent] = useState(false);
@@ -199,13 +198,13 @@ function App() {
             </div>
 
             <div className="portfolio-box">
-              <img src={ballpen} alt="Ballpen Ad" />
+              <img src={aktiv} alt="Aktiv App" />
               <div className="portfolio-content">
-                <h4>Ballpen Ad</h4>
-                <p>Stationery product advertisement design.</p>
+                <h4>Aktiv App</h4>
+                <p>Learning application interface design.</p>
 
                 <a
-                  href="https://www.figma.com/design/qu0XSSPJ5x2aTOxNi6N8qd/Amistoso_Challenge1?t=6QpDhnEdTqkWgS0v-1"
+                  href="https://www.figma.com/design/hMfDB1h6Ysy7SvKqtuIG9m/aktiv?node-id=9-2&t=T96XUfTrZ4Y18cCh-0"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="view-btn"
