@@ -79,7 +79,7 @@ function App() {
                 className="btn"
                 onClick={() => {
                   const link = document.createElement("a");
-                  link.href = "/My_CV.pdf";
+                  link.href = "/MY_CV.pdf";
                   link.download = "Amistoso_CV.pdf"; 
                   link.click();
                 }}
