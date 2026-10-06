@@ -51,7 +51,8 @@ function App() {
               <h4>
                 And I'm a <span className="multiple"></span>
               </h4>
-
+            </div>
+            
               <p>
                 Currently pursuing a Bachelor of Science in Information Technology at Western Institute of Technology, with a strong interest in exploring new technologies and building practical, tech-driven projects.
               </p>
@@ -74,19 +75,67 @@ function App() {
                 </a>
               </div>
 
+                <section className="skills" id="skills">
+                  <div className="container">
+                    <h2>My <span>Skills</span></h2>
+                    <div className="skills-grid">
+                      <div className="skills-card">
+                        <h3><i className="bx bx-code-alt"></i> Web</h3>
+                        <ul className="skill-list">
+                          <li>HTML</li><li>CSS</li><li>JavaScript</li><li>React</li>
+                        </ul>
+                      </div>
+                      <div className="skills-card">
+                        <h3><i className="bx bx-wrench"></i> Tools</h3>
+                        <ul className="skill-list">
+                          <li>Git</li><li>GitHub</li><li>VS Code</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </section>
 
-              <button
-                className="btn"
-                onClick={() => {
-                  const link = document.createElement("a");
-                  link.href = "/MY_CV.pdf";
-                  link.download = "Amistoso_CV.pdf"; 
-                  link.click();
-                }}
-              >
-                Download CV
-              </button>
-            </div>
+                <section className="education" id="education">
+                  <div className="container">
+                    <h2>My <span>Education</span></h2>
+                    <div className="timeline">
+                      <div className="timeline-item">
+                        <span className="timeline-date">2024 – Present</span>
+                        <h3>BS in Information Technology</h3>
+                        <p className="timeline-school">Western Institute of Technology</p>
+                      </div>
+                      <div className="timeline-item">
+                        <span className="timeline-date">2017 – 2023</span>
+                        <h3>Senior High School</h3>
+                        <p className="timeline-school">Iloilo National High School</p>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <div className="info-card">
+                  <div className="info-grid">
+                    <div className="info-item">
+                      <i className="bx bx-map"></i>
+                      <div><small>Location</small><strong>Iloilo City</strong></div>
+                    </div>
+                    <div className="info-item">
+                      <i className="bx bx-globe"></i>
+                      <div><small>Languages</small><strong>English, Filipino</strong></div>
+                    </div>
+                  </div>
+                  <span className="info-badge">Open to internships</span>
+                </div>
+
+                <section className="achievements">
+                  <div className="container">
+                    <h2>My <span>Achievements</span></h2>
+                    <ul className="achievement-list">
+                      <li>Active participant in academic and project-based activities</li>
+                      <li>Demonstrated leadership in group collaborations</li>
+                    </ul>
+                  </div>
+                </section>
 
             <div className="right">
               <div className="profile">
