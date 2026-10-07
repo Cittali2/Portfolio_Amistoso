@@ -405,14 +405,38 @@ nav {
     0 0 20px rgba(20, 184, 166, 0.25);
 }
 
-.btn {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+.cv-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border: 1px solid #8fd8d0;
+    border-radius: 10px;
+    background: #b9e8e2;
+    color: #174c48;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(23, 76, 72, 0.12);
+}
 
-  flex-wrap: wrap;
+.cv-btn:hover {
+    background: #9ddbd3;
+    border-color: #7ccbc2;
+    color: #123d39;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(23, 76, 72, 0.18);
+}
 
-  gap: 14px;
+.cv-btn:active {
+    transform: translateY(0);
+}
+
+.cv-btn i {
+    font-size: 15px;
 }
 
 .btn button {

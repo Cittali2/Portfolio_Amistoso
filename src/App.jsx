@@ -79,12 +79,13 @@ function App() {
                 <a href="https://www.facebook.com/misnins" target="_blank" rel="noopener noreferrer">
                   <i className="fa-brands fa-facebook-f"></i>
                 </a>
+                </div>
               </div>
 
-              <button className="btn" onClick={downloadCV}>
-                Download CV
-              </button>
-            </div>
+              <a href="cv.pdf" className="cv-btn" target="_blank">
+                  <i className="fa-solid fa-file-arrow-down"></i>
+                  Download CV
+              </a>
 
             <div className="right">
               <div className="profile">
