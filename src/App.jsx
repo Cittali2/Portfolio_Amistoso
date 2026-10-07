@@ -1,5 +1,5 @@
 import "./App.css";
-import { useEffect, useState } from "react";
+import { useEffect, useState } from "react"; 
 import Typed from "typed.js";
 
 import profile from "./assets/profilenbg.png";
@@ -21,13 +21,6 @@ function App() {
 
     return () => typed.destroy();
   }, []);
-
-  const downloadCV = () => {
-    const link = document.createElement("a");
-    link.href = "/My_CV.pdf";
-    link.download = "Amistoso_CV.pdf";
-    link.click();
-  };
 
   return (
     <>
@@ -79,114 +72,123 @@ function App() {
                 <a href="https://www.facebook.com/misnins" target="_blank" rel="noopener noreferrer">
                   <i className="fa-brands fa-facebook-f"></i>
                 </a>
-                </div>
               </div>
 
-              <a href="cv.pdf" className="cv-btn" target="_blank">
-                  <i className="fa-solid fa-file-arrow-down"></i>
-                  Download CV
-              </a>
+
+              <button
+                className="btn"
+                onClick={() => {
+                  const link = document.createElement("a");
+                  link.href = "/MY_CV.pdf";
+                  link.download = "Amistoso_CV.pdf"; 
+                  link.click();
+                }}
+              >
+                Download CV
+              </button>
+            </div>
+
+
+                <section className="skills" id="skills">
+                  <div className="container">
+                    <h2>My <span>Skills</span></h2>
+                    <div className="skills-grid">
+                      <div className="skills-card">
+                        <h3><i className="bx bx-code-alt"></i> Web</h3>
+                        <ul className="skill-list">
+                          <li>HTML</li><li>CSS</li><li>JavaScript</li><li>React</li>
+                        </ul>
+                      </div>
+                      <div className="skills-card">
+                        <h3><i className="bx bx-wrench"></i> Tools</h3>
+                        <ul className="skill-list">
+                          <li>Git</li><li>GitHub</li><li>VS Code</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <section className="education" id="education">
+                  <div className="container">
+                    <h2>My <span>Education</span></h2>
+                    <div className="timeline">
+                      <div className="timeline-item">
+                        <span className="timeline-date">2024 – Present</span>
+                        <h3>BS in Information Technology</h3>
+                        <p className="timeline-school">Western Institute of Technology</p>
+                      </div>
+                      <div className="timeline-item">
+                        <span className="timeline-date">2017 – 2023</span>
+                        <h3>Senior High School</h3>
+                        <p className="timeline-school">Iloilo National High School</p>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <div className="info-card">
+                  <div className="info-grid">
+                    <div className="info-item">
+                      <i className="bx bx-map"></i>
+                      <div><small>Location</small><strong>Iloilo City</strong></div>
+                    </div>
+                    <div className="info-item">
+                      <i className="bx bx-globe"></i>
+                      <div><small>Languages</small><strong>English, Filipino</strong></div>
+                    </div>
+                  </div>
+                  <span className="info-badge">Open to internships</span>
+                </div>
+
+                <section className="achievements">
+                  <div className="container">
+                    <h2>My <span>Achievements</span></h2>
+                    <ul className="achievement-list">
+                      <li>Active participant in academic and project-based activities</li>
+                      <li>Demonstrated leadership in group collaborations</li>
+                    </ul>
+                  </div>
+                </section>
 
             <div className="right">
               <div className="profile">
-                <img src={profile} alt="Niña Amistoso" />
-                <span className="floating-dot"></span>
+                <img src={profile} alt="profile" />
               </div>
+              <span className="floating-dot"></span>
             </div>
           </div>
         </div>
       </section>
 
       <section id="about" className="about">
-        <div className="container">
-          <div className="about-wrapper">
-            <div className="about-left">
-              <div className="about-image-frame">
-                <img src={profiledos} alt="about" />
-              </div>
-            </div>
-
-            <div className="about-right">
-              <div className="about-tag">About Me</div>
-              <h2>
-                About <span>Me</span>
-              </h2>
-              <h3>Front-End Developer</h3>
-              <p>
-                I am a Front-End Developer who enjoys creating clean, responsive, and user-friendly websites. I use HTML, CSS, and JavaScript to turn ideas into functional and visually appealing designs. I focus on improving user experience and continuously learning new tools to enhance my skills.
-              </p>
-
-              <div className="about-highlights">
-                <span>Responsive Design</span>
-                <span>UI-Focused</span>
-                <span>Creative Layouts</span>
-              </div>
-            </div>
-          </div>
+  <div className="container">
+    <div className="about-wrapper">
+      <div className="about-left">
+        <div className="about-image-frame">
+          <img src={profiledos} alt="about" />
         </div>
-      </section>
+      </div>
 
-      <section className="skills" id="skills">
-        <div className="container">
-          <h2>My <span>Skills</span></h2>
-          <div className="skills-grid">
-            <div className="skills-card">
-              <h3><i className="fa-solid fa-code"></i> Web</h3>
-              <ul className="skill-list">
-                <li>HTML</li><li>CSS</li><li>JavaScript</li><li>React</li>
-              </ul>
-            </div>
-            <div className="skills-card">
-              <h3><i className="fa-solid fa-screwdriver-wrench"></i> Tools</h3>
-              <ul className="skill-list">
-                <li>Git</li><li>GitHub</li><li>VS Code</li>
-              </ul>
-            </div>
-          </div>
+      <div className="about-right">
+        <div className="about-tag">About Me</div>
+        <h2>
+          About <span>Me</span>
+        </h2>
+        <h3>Front-End Developer</h3>
+        <p>
+          I am a Front-End Developer who enjoys creating clean, responsive, and user-friendly websites. I use HTML, CSS, and JavaScript to turn ideas into functional and visually appealing designs. I focus on improving user experience and continuously learning new tools to enhance my skills.
+        </p>
+
+        <div className="about-highlights">
+          <span>Responsive Design</span>
+          <span>UI-Focused</span>
+          <span>Creative Layouts</span>
         </div>
-      </section>
-
-      <section className="education" id="education">
-        <div className="container">
-          <h2>My <span>Education</span></h2>
-          <div className="timeline">
-            <div className="timeline-item">
-              <span className="timeline-date">2024 – Present</span>
-              <h3>BS in Information Technology</h3>
-              <p className="timeline-school">Western Institute of Technology</p>
-            </div>
-            <div className="timeline-item">
-              <span className="timeline-date">2017 – 2023</span>
-              <h3>Senior High School</h3>
-              <p className="timeline-school">Iloilo National High School</p>
-            </div>
-          </div>
-
-          <div className="info-card">
-            <div className="info-grid">
-              <div className="info-item">
-                <i className="fa-solid fa-location-dot"></i>
-                <div><small>Location</small><strong>Iloilo City</strong></div>
-              </div>
-              <div className="info-item">
-                <i className="fa-solid fa-globe"></i>
-                <div><small>Languages</small><strong>English, Filipino</strong></div>
-              </div>
-            </div>
-            <span className="info-badge">Open to internships</span>
-          </div>
-        </div>
-      </section>
-
-      <section className="achievements" id="achievements">
-        <div className="container">
-          <h2>My <span>Achievements</span></h2>
-          <ul className="achievement-list">
-            <li>Active participant in academic and project-based activities</li>
-            <li>Demonstrated leadership in group collaborations</li>
-          </ul>
-        </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
 
       <section id="services" className="services">
         <div className="container">
@@ -196,25 +198,19 @@ function App() {
 
           <div className="service-box">
             <div className="box">
-              <div className="service-icon">
-                <i className="fa-solid fa-code"></i>
-              </div>
+              <i className="fa-solid fa-code"></i>
               <h3>Web Development</h3>
               <p>Building fast, reliable, and responsive interfaces using HTML, CSS, and JavaScript.</p>
             </div>
 
             <div className="box">
-              <div className="service-icon">
-                <i className="fa-solid fa-pen-fancy"></i>
-              </div>
+              <i className="fa-solid fa-pen-fancy"></i>
               <h3>UX/UI</h3>
               <p>Creating clear and concise UI content that improves usability and guides users smoothly.</p>
             </div>
 
             <div className="box">
-              <div className="service-icon">
-                <i className="fa-solid fa-palette"></i>
-              </div>
+              <i className="fa-solid fa-palette"></i>
               <h3>Web Design</h3>
               <p>Designing visually engaging layouts that balance creativity and usability.</p>
             </div>
@@ -230,7 +226,7 @@ function App() {
 
           <div className="portfolio-wrapper">
             <div className="portfolio-box">
-              <img src={tradetime} alt="Tradetime Design" />
+              <img src={tradetime} />
 
               <div className="portfolio-content">
                 <h4>TRADETIME</h4>
@@ -296,7 +292,7 @@ function App() {
               e.target.reset();
               setSent(true);
 
-              setTimeout(() => setSent(false), 3000);
+              setTimeout(() => setSent(false), 3000); // auto hide
             }}
           >
             <div className="input-row">

@@ -405,102 +405,41 @@ nav {
     0 0 20px rgba(20, 184, 166, 0.25);
 }
 
-.cv-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    padding: 12px 24px;
-    border: 1px solid #8fd8d0;
-    border-radius: 10px;
-    background: #b9e8e2;
-    color: #174c48;
-    font-size: 14px;
-    font-weight: 600;
-    text-decoration: none;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(23, 76, 72, 0.12);
-}
-
-.cv-btn:hover {
-    background: #9ddbd3;
-    border-color: #7ccbc2;
-    color: #123d39;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(23, 76, 72, 0.18);
-}
-
-.cv-btn:active {
-    transform: translateY(0);
-}
-
-.cv-btn i {
-    font-size: 15px;
-}
-
-.btn button {
-  position: relative;
-
-  min-width: 140px;
-
-  padding: 13px 30px;
-
-  border: 1px solid rgba(255, 255, 255, 0.08);
-
-  border-radius: 999px;
-
-  background:
-    linear-gradient(
-      135deg,
-      var(--primary),
-      var(--primary-dark)
-    );
-
-  color: #fff;
-
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: fit-content;
+  min-width: 130px;
+  padding: 10px 22px;
+  margin-top: 0;
+  border: 1px solid #8fd8d0;
+  border-radius: 9px;
+  background: #b9e8e2;
+  color: #174c48;
+  font-size: 13px;
   font-weight: 600;
-  letter-spacing: 0.4px;
-
+  text-decoration: none;
   cursor: pointer;
-
-  overflow: hidden;
-
-  box-shadow:
-    0 10px 22px rgba(20, 184, 166, 0.25),
-    inset 0 1px 0 rgba(255, 255, 255, 0.18);
-
-  transition: all 0.35s ease;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(23, 76, 72, 0.12);
 }
 
-.btn button::before {
-  content: "";
-
-  position: absolute;
-  inset: 1px;
-
-  border-radius: inherit;
-
-  background:
-    linear-gradient(
-      135deg,
-      rgba(255, 255, 255, 0.18),
-      transparent 45%
-    );
-
-  pointer-events: none;
+.btn:hover {
+  background: #9ddbd3;
+  border-color: #7ccbc2;
+  color: #123d39;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(23, 76, 72, 0.18);
 }
 
-.btn button:hover {
-  transform: translateY(-4px);
-
-  box-shadow:
-    0 16px 28px rgba(20, 184, 166, 0.35),
-    0 0 28px rgba(20, 184, 166, 0.18);
-}
-
-.btn button:active {
+.btn:active {
   transform: translateY(0);
+}
+
+.btn i {
+  font-size: 14px;
 }
 
 .right {
