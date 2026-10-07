@@ -405,41 +405,64 @@ nav {
     0 0 20px rgba(20, 184, 166, 0.25);
 }
 
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  width: fit-content;
-  min-width: 130px;
-  padding: 10px 22px;
-  margin-top: 0;
-  border: 1px solid #8fd8d0;
-  border-radius: 9px;
-  background: #b9e8e2;
-  color: #174c48;
-  font-size: 13px;
-  font-weight: 600;
-  text-decoration: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(23, 76, 72, 0.12);
+.btn { 
+  display: flex;
+  align-items: center; 
+  justify-content: flex-start; 
+  flex-wrap: wrap; 
+  gap: 12px; 
 }
 
-.btn:hover {
-  background: #9ddbd3;
-  border-color: #7ccbc2;
-  color: #123d39;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(23, 76, 72, 0.18);
+.btn button {
+  position: relative; 
+  min-width: 125px; 
+  padding: 10px 22px; 
+  border: 1px solid rgba(255, 255, 255, 0.12); 
+  border-radius: 10px; 
+  background: linear-gradient( 135deg, var(--primary), var(--primary-dark) 
+  );
+  color: #fff; 
+  font-size: 13px; 
+  font-weight: 500; 
+  letter-spacing: 0.3px; 
+  cursor: pointer; 
+  overflow: hidden; 
+  box-shadow: 0 6px 16px rgba(20, 184, 166, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.18); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease; 
 }
 
-.btn:active {
-  transform: translateY(0);
+.btn button::before { 
+  content: ""; 
+  position: absolute; 
+  top: 0; 
+  left: -100%; 
+  width: 70%; 
+  height: 100%; 
+  background: linear-gradient( 110deg, transparent, rgba(255, 255, 255, 0.22), transparent ); 
+  transform: skewX(-20deg); 
+  transition: left 0.5s ease; 
+  pointer-events: none; 
 }
 
-.btn i {
-  font-size: 14px;
+.btn button:hover { 
+  transform: translateY(-3px); 
+  background: linear-gradient( 
+    135deg, 
+    var(--primary-dark), 
+    var(--primary) ); 
+  box-shadow: 
+  0 10px 22px rgba(20, 184, 166, 0.3), 
+  0 0 16px rgba(20, 184, 166, 0.15); 
+}
+
+.btn button:hover::before { 
+  left: 130%; 
+} 
+
+.btn button:active { 
+  transform: translateY(-1px); 
+  box-shadow: 
+  0 5px 12px rgba(20, 184, 166, 0.2); 
 }
 
 .right {
