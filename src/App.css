@@ -413,56 +413,51 @@ nav {
   gap: 12px; 
 }
 
-.btn button {
-  position: relative; 
-  min-width: 125px; 
-  padding: 10px 22px; 
-  border: 1px solid rgba(255, 255, 255, 0.12); 
-  border-radius: 10px; 
-  background: linear-gradient( 135deg, var(--primary), var(--primary-dark) 
-  );
-  color: #fff; 
-  font-size: 13px; 
-  font-weight: 500; 
-  letter-spacing: 0.3px; 
-  cursor: pointer; 
-  overflow: hidden; 
-  box-shadow: 0 6px 16px rgba(20, 184, 166, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.18); 
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease; 
+
+.btn,
+.contact button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13px 30px;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+  color: #fff;
+  font-size: 0.96rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 10px 22px rgba(20, 184, 166, 0.3);
 }
-
-.btn button::before { 
-  content: ""; 
-  position: absolute; 
-  top: 0; 
-  left: -100%; 
-  width: 70%; 
-  height: 100%; 
-  background: linear-gradient( 110deg, transparent, rgba(255, 255, 255, 0.22), transparent ); 
-  transform: skewX(-20deg); 
-  transition: left 0.5s ease; 
-  pointer-events: none; 
+ 
+.btn::before,
+.contact button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent 20%, rgba(255, 255, 255, 0.28) 50%, transparent 80%);
+  transform: translateX(-120%);
+  transition: transform 0.6s ease;
 }
-
-.btn button:hover { 
-  transform: translateY(-3px); 
-  background: linear-gradient( 
-    135deg, 
-    var(--primary-dark), 
-    var(--primary) ); 
-  box-shadow: 
-  0 10px 22px rgba(20, 184, 166, 0.3), 
-  0 0 16px rgba(20, 184, 166, 0.15); 
+ 
+.btn:hover,
+.contact button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 28px rgba(20, 184, 166, 0.35), 0 0 24px rgba(20, 184, 166, 0.18);
 }
-
-.btn button:hover::before { 
-  left: 130%; 
-} 
-
-.btn button:active { 
-  transform: translateY(-1px); 
-  box-shadow: 
-  0 5px 12px rgba(20, 184, 166, 0.2); 
+ 
+.btn:hover::before,
+.contact button:hover::before {
+  transform: translateX(120%);
+}
+ 
+.btn:active,
+.contact button:active {
+  transform: translateY(0);
 }
 
 .right {
